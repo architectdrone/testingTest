@@ -1,0 +1,4 @@
+1. The size of the list doesn't update after elements are removed.
+2. isEmpty() always returns true, even when it is not empty.
+3. addBack adds to the front.
+4. Neither removeFront or removeBack work.
