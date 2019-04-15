@@ -25,6 +25,7 @@ int message(bool passed, string msg)
 
 void TestSuite::testAll()
 {
+  printf("Hello! Items marked [ ] succeeded, and the statement associated with them is true, whereas [X] did not succeed.");
   int numErrors = 0;
   numErrors+=testInit();
   numErrors+=testAddBack();
@@ -216,18 +217,6 @@ int TestSuite::testOrdering()
   toReturn+=message(listA.toVector()[50] == 49, "Element was removed from the back of the list.");
   listA.removeFront();
   toReturn+=message(listA.toVector()[0] == 0, "Element was removed from the front of the list.");
-
-  LinkedListOfInts listB;
-  for (int i = 10; i > 0; i--)
-  {
-    listB.addFront(i);
-  }
-  printf("Hey\n");
-  listB.removeFront();
-  listB.removeBack();
-  for (int i = 0; i < listB.toVector().size(); i++)
-  {
-    cout << listB.toVector()[i] << endl;
-  }
+  
   return toReturn;
 }
